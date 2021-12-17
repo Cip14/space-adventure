@@ -1,30 +1,81 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="pt" dir="ltr">
+
 <head>
   <meta charset="utf-8">
   <link rel="stylesheet" href="style.css">
   <title>Sistema de Coordenadas</title>
 </head>
+
 <body>
   <div class="content">
     <div class="line">
-      <label>Ponto A</label>
-      <input id="pontoA" type="text" name="pa" value="">
+      <label>Ponto de Referência A</label>
+      <input id="pontoA" type="text" name="pa" value="" required placeholder="GPS:EarthLike:0.50:0.50:0.50:">
     </div>
     <div class="line">
-      <label>Ponto B</label>
-      <input id="pontoB" type="text" name="pb" value="">
+      <label>Ponto de Referência B</label>
+      <input id="pontoB" type="text" name="pb" value="" required placeholder="GPS:Referência Norte:0.50:10.50:0.50:">
     </div>
     <div class="line">
-      <label>Distancia AC</label>
-      <input id="distAC" type="number" name="ac" value="">
+      <label>Distancia AC (km)</label>
+      <input id="distAC" type="number" name="ac" value="" required placeholder="60">
     </div>
     <div class="line">
-      <label>Ponto C</label>
-      <input id="pontoC" type="text" name="pc" value="">
+      <label>Ponto de Destino C</label>
+      <input id="pontoC" type="text" name="pc" value="" placeholder="GPS:Pólo Norte:0.50:60000.50:0.50:">
     </div>
     <button type="button" name="button" onclick="calcular()">Calcular</button>
   </div>
 </body>
 <script type="text/javascript" src="logica.js"></script>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Diameter</th>
+    <th>GPS</th>
+  </tr>
+  <tr>
+    <td>EarthLike</td>
+    <td>120.00</td>
+    <td>GPS:EarthLike:0.50:0.50:0.50:</td>
+  </tr>
+  <tr>
+    <td>Moon</td>
+    <td>19.00</td>
+    <td>GPS:Moon:16384.50:136384.50:-113615.50:</td>
+  </tr>
+  <tr>
+    <td>Mars</td>
+    <td>120.00</td>
+    <td>GPS:Mars:1031072.50:131072.50:1631072.50:</td>
+  </tr>
+  <tr>
+    <td>Europa</td>
+    <td>19.00</td>
+    <td>GPS:Europa:916384.50:16384.50:1616384.50:</td>
+  </tr>
+  <tr>
+    <td>Triton</td>
+    <td>80.25</td>
+    <td>GPS:Triton:-284463.50:-2434463.50:365536.50:</td>
+  </tr>
+  <tr>
+    <td>Pertam</td>
+    <td>60.00</td>
+    <td>GPS:Pertam:-3967231.50:-32231.50:-767231.50:</td>
+  </tr>
+  <tr>
+    <td>Alien</td>
+    <td>120.00</td>
+    <td>GPS:Alien:131072.50:131072.50:5731072.50:</td>
+  </tr>
+  <tr>
+    <td>Titan</td>
+    <td>19.00</td>
+    <td>GPS:Titan:36384.50:226384.50:5796384.50:</td>
+  </tr>
+</table>
+
 </html>
