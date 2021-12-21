@@ -1,13 +1,15 @@
-const celestialBody = document.querySelector('#celestialBody')
+const celestialBody = document.querySelector('#origin')
 celestialBody.addEventListener('change', () => {
-  const pontoA = document.querySelector('#pontoA')
+  const pontoA = document.querySelector('#ponto-A')
   if (celestialBody.value === 'customGPS') {
     pontoA.removeAttribute('readonly')
     pontoA.classList.remove('read-only')
+    document.querySelector('.dist-comuns').classList.add('hidden')
   } else {
     pontoA.value = getCelestialBodyData(celestialBody.value).gps;
     pontoA.setAttribute('readonly', 'true')
     pontoA.classList.add('read-only')
+    document.querySelector('.dist-comuns').classList.remove('hidden')
   }
 })
 
@@ -23,13 +25,23 @@ function selectRefB() {
   })
 }
 
+document.querySelector('#superficie').addEventListener('click', () => {
+  const dist = document.querySelector('#dist-A-C')
+  dist.value = getCelestialBodyData(celestialBody.value).diameter / 2
+})
+
+document.querySelector('#alcance-gravidade').addEventListener('click', () => {
+  const dist = document.querySelector('#dist-A-C')
+  dist.value = (getCelestialBodyData(celestialBody.value).diameter / 2) * (1.7182)
+})
+
 document.querySelector('#calcular').addEventListener('click', () => {
   const gpsName = document.querySelector('#gpsName').value;
   const gpsColor = document.querySelector('#gpsColor').value;
   const pc = document.querySelector('#destino')
-  const paCoord = getCoord('#pontoA')
+  const paCoord = getCoord('#ponto-A')
   const option = document.querySelector('#sel-refB').value
-  const dist = document.querySelector('#distancia').value
+  const dist = document.querySelector('#dist-A-C').value
 
   if (option === "lat-lon") {
     const lat = document.querySelector('#latitude').value
@@ -37,7 +49,7 @@ document.querySelector('#calcular').addEventListener('click', () => {
     const pcCoord = calcularAngular(paCoord, lat, lon, dist)
     pc.value = `GPS:${gpsName}:${pcCoord[0].toFixed(2)}:${pcCoord[1].toFixed(2)}:${pcCoord[2].toFixed(2)}:${gpsColor}:`;
   } else {
-    const pbCoord = getCoord('#pontoB')
+    const pbCoord = getCoord('#ponto-B')
     const pcCoord = calculoReta(paCoord, pbCoord, dist)
     pc.value = `GPS:${gpsName}:${pcCoord[0].toFixed(2)}:${pcCoord[1].toFixed(2)}:${pcCoord[2].toFixed(2)}:${gpsColor}:`;
   }

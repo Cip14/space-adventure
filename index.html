@@ -9,57 +9,58 @@
 
 <body>
   <div class="content">
-
-    <div class="orbitalCalc">
-
-      <div class="line">
-        <label for="celestialBody">Origem:</label>
-        <select id="celestialBody">
-          <option value="customGPS">GPS Personalizado</option>
-          <option value="EarthLike">EarthLike</option>
-          <option value="Moon">Moon</option>
-          <option value="Mars">Mars</option>
-          <option value="Europa">Europa</option>
-          <option value="Triton">Triton</option>
-          <option value="Pertam">Pertam</option>
-          <option value="Alien">Alien</option>
-          <option value="Titan">Titan</option>
-        </select>
-      </div>
-      <div class="gps line">
-        <div class="gps line">
-          <input id="pontoA" type="text" name="pa" value="" placeholder="GPS:EarthLike:0.50:0.50:0.50:">
-        </div>
-      </div>
-      <hr>
-      <label for="method-selection">Metodo:</label>
-      <select name="method-selection" id="sel-refB">
-        <option value="lat-lon">Latidude e Longitude</option>
-        <option value="ref-point">GPS de referência</option>
+    <div class="line">
+      <label for="origin">Origem:</label>
+      <select id="origin">
+        <option value="customGPS">GPS Personalizado</option>
+        <option value="EarthLike">EarthLike</option>
+        <option value="Moon">Moon</option>
+        <option value="Mars">Mars</option>
+        <option value="Europa">Europa</option>
+        <option value="Triton">Triton</option>
+        <option value="Pertam">Pertam</option>
+        <option value="Alien">Alien</option>
+        <option value="Titan">Titan</option>
       </select>
-      <div class="numbers line refB lat-lon">
-        <label for="latitude">Latitude:</label>
-        <input type="number" name="latitude" id="latitude" min="-360" max="360">
-        <label for="longitude">longitude:</label>
-        <input type="number" name="longitude" id="longitude" min="-360" max="360">
-      </div>
-      <div class="gps line ref-point refB">
-        <input id="pontoB" type="text" name="pb" value="" placeholder="GPS:Coordenadas:X:Y:Z:">
-      </div>
-      <hr>
-      <div class="numbers line">
-        <label for="distanciaOrbita">Distancia(km)</label>
-        <input type="number" name="distancia" id="distancia" step="0.001">
-      </div>
-      <hr>
-      <div class="gps line">
-        <label>Destino</label>
-        <input type="text" id="gpsName" name="gpsName" value="Target" placeholder="Nome">
-        <input type="color" name="gpsColor" id="gpsColor" value="#45E6D5">
-        <input id="destino" type="text" name="pc">
-      </div>
-      <button type="button" name="button" id="calcular">Calcular</button>
     </div>
+    <div class="gps line">
+      <div class="gps line">
+        <input id="ponto-A" type="text" value="" placeholder="GPS:EarthLike:0.50:0.50:0.50:">
+      </div>
+    </div>
+    <hr>
+    <label for="method-selection">Método:</label>
+    <select name="method-selection" id="sel-refB">
+      <option value="lat-lon">Latidude e Longitude</option>
+      <option value="ref-point">GPS de referência</option>
+    </select>
+    <div class="numbers line refB lat-lon">
+      <label for="latitude">Latitude:</label>
+      <input type="number" name="latitude" id="latitude" min="-360" max="360">
+      <label for="longitude">longitude:</label>
+      <input type="number" name="longitude" id="longitude" min="-360" max="360">
+    </div>
+    <div class="gps line ref-point refB">
+      <input id="ponto-B" type="text" name="pb" value="" placeholder="GPS:Coordenadas:X:Y:Z:">
+    </div>
+    <hr>
+    <div class="numbers line">
+      <label for="dist-A-C">Distancia(km):</label>
+      <input type="number" name="dist-A-C" id="dist-A-C" step="0.001">
+      <div class="dist-comuns hidden">
+        <label>Distâncias comuns</label>
+        <button id="superficie">Superfície</button>
+        <button id="alcance-gravidade">Alcance Gravidade</button>
+      </div>
+    </div>
+    <hr>
+    <div class="gps line">
+      <label>Destino</label>
+      <input type="text" id="gpsName" name="gpsName" value="Target" placeholder="Nome">
+      <input type="color" name="gpsColor" id="gpsColor" value="#45E6D5">
+      <input id="destino" type="text">
+    </div>
+    <button type="button" name="button" id="calcular">Calcular</button>
   </div>
 </body>
 <script type="text/javascript" src="script.js"></script>

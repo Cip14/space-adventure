@@ -67,6 +67,19 @@ button:hover{
   background-color: rgb(91, 115, 123);
 }
 
+.dist-comuns{
+  display: inline-table;
+}
+
+.dist-comuns label{
+  display:table-caption;
+  text-align: center;
+}
+
+.dist-comuns button{
+  padding: 5px 10px;
+}
+
 .hidden{
   display: none;
 }
