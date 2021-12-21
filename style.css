@@ -1,3 +1,17 @@
+body{
+  background: #000;
+}
+.content{
+  background: rgba(35, 44, 51, 0.596);
+  color: #fff;
+  font-family: monospace;
+  font-size: 2ch;
+  font-weight: bold;
+}
+hr{
+  background-color: rgb(91, 115, 123);
+}
+
 .content{
   margin: auto;
   width: 50%;
@@ -11,18 +25,48 @@
 
 .line input{
   padding: 10px;
-  background-color: #fff;
-  border: 1px solid #ddd;
-  width: 100%
+  background-color: rgb(41, 54, 62);
+  border: 2px solid rgb(41, 53, 63);
+  color: #fff;
+  width: 97%
+}
+
+.gps .read-only{
+  color: gray;
+}
+
+.numbers input{
+  width: 12ch
+}
+
+#gpsName{
+  height: 1ch;
+  width: 10ch;
+}
+#gpsColor{
+  margin: auto;
+  padding: 2px;
+  height: 22px;
+  width: 22px;
+}
+
+select{
+  background-color: rgb(91, 115, 123);
+  border: 2px solid rgb(41, 53, 63);
+  color: #fff;
 }
 
 button{
   padding: 10px 20px;
-  background-color: dodgerblue;
-  border: 1px solid #ddd;
+  background-color: rgb(41, 53, 63);
+  border: 1px solid rgb(91, 115, 123);
   color: white;
 }
 
 button:hover{
-  background-color: royalblue;
+  background-color: rgb(91, 115, 123);
+}
+
+.hidden{
+  display: none;
 }

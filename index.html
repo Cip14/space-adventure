@@ -9,73 +9,59 @@
 
 <body>
   <div class="content">
-    <div class="line">
-      <label>Ponto de Referência A</label>
-      <input id="pontoA" type="text" name="pa" value="" required placeholder="GPS:EarthLike:0.50:0.50:0.50:">
+
+    <div class="orbitalCalc">
+
+      <div class="line">
+        <label for="celestialBody">Origem:</label>
+        <select id="celestialBody">
+          <option value="customGPS">GPS Personalizado</option>
+          <option value="EarthLike">EarthLike</option>
+          <option value="Moon">Moon</option>
+          <option value="Mars">Mars</option>
+          <option value="Europa">Europa</option>
+          <option value="Triton">Triton</option>
+          <option value="Pertam">Pertam</option>
+          <option value="Alien">Alien</option>
+          <option value="Titan">Titan</option>
+        </select>
+      </div>
+      <div class="gps line">
+        <div class="gps line">
+          <input id="pontoA" type="text" name="pa" value="" placeholder="GPS:EarthLike:0.50:0.50:0.50:">
+        </div>
+      </div>
+      <hr>
+      <label for="method-selection">Metodo:</label>
+      <select name="method-selection" id="sel-refB">
+        <option value="lat-lon">Latidude e Longitude</option>
+        <option value="ref-point">GPS de referência</option>
+      </select>
+      <div class="numbers line refB lat-lon">
+        <label for="latitude">Latitude:</label>
+        <input type="number" name="latitude" id="latitude" min="-360" max="360">
+        <label for="longitude">longitude:</label>
+        <input type="number" name="longitude" id="longitude" min="-360" max="360">
+      </div>
+      <div class="gps line ref-point refB">
+        <input id="pontoB" type="text" name="pb" value="" placeholder="GPS:Coordenadas:X:Y:Z:">
+      </div>
+      <hr>
+      <div class="numbers line">
+        <label for="distanciaOrbita">Distancia(km)</label>
+        <input type="number" name="distancia" id="distancia" step="0.001">
+      </div>
+      <hr>
+      <div class="gps line">
+        <label>Destino</label>
+        <input type="text" id="gpsName" name="gpsName" value="Target" placeholder="Nome">
+        <input type="color" name="gpsColor" id="gpsColor" value="#45E6D5">
+        <input id="destino" type="text" name="pc">
+      </div>
+      <button type="button" name="button" id="calcular">Calcular</button>
     </div>
-    <div class="line">
-      <label>Ponto de Referência B</label>
-      <input id="pontoB" type="text" name="pb" value="" required placeholder="GPS:Referência Norte:0.50:10.50:0.50:">
-    </div>
-    <div class="line">
-      <label>Distancia AC (km)</label>
-      <input id="distAC" type="number" name="ac" value="" required placeholder="60">
-    </div>
-    <div class="line">
-      <label>Ponto de Destino C</label>
-      <input id="pontoC" type="text" name="pc" value="" placeholder="GPS:Pólo Norte:0.50:60000.50:0.50:">
-    </div>
-    <button type="button" name="button" onclick="calcular()">Calcular</button>
   </div>
 </body>
-<script type="text/javascript" src="logica.js"></script>
-
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Diameter</th>
-    <th>GPS</th>
-  </tr>
-  <tr>
-    <td>EarthLike</td>
-    <td>120.00</td>
-    <td>GPS:EarthLike:0.50:0.50:0.50:</td>
-  </tr>
-  <tr>
-    <td>Moon</td>
-    <td>19.00</td>
-    <td>GPS:Moon:16384.50:136384.50:-113615.50:</td>
-  </tr>
-  <tr>
-    <td>Mars</td>
-    <td>120.00</td>
-    <td>GPS:Mars:1031072.50:131072.50:1631072.50:</td>
-  </tr>
-  <tr>
-    <td>Europa</td>
-    <td>19.00</td>
-    <td>GPS:Europa:916384.50:16384.50:1616384.50:</td>
-  </tr>
-  <tr>
-    <td>Triton</td>
-    <td>80.25</td>
-    <td>GPS:Triton:-284463.50:-2434463.50:365536.50:</td>
-  </tr>
-  <tr>
-    <td>Pertam</td>
-    <td>60.00</td>
-    <td>GPS:Pertam:-3967231.50:-32231.50:-767231.50:</td>
-  </tr>
-  <tr>
-    <td>Alien</td>
-    <td>120.00</td>
-    <td>GPS:Alien:131072.50:131072.50:5731072.50:</td>
-  </tr>
-  <tr>
-    <td>Titan</td>
-    <td>19.00</td>
-    <td>GPS:Titan:36384.50:226384.50:5796384.50:</td>
-  </tr>
-</table>
+<script type="text/javascript" src="script.js"></script>
 
 </html>
