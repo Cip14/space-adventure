@@ -9,14 +9,16 @@ This project began as a tool to calculate GPS coordinates making it easier to na
 
 Como usar:
 
-  Origem: Seu local atual ou o centro de um corpo celeste(planetas e luas)
+  Origem: Seu local atual ou o centro de um corpo celeste(planetas e luas).
   
-  Método: Método usado para determinar a direção da coordenada GPS de destino
+  Método: Método usado para determinar a direção da coordenada GPS de destino.
   
-    Latitude e Longitude: Determina a direção da coordenada de destino através de angulos alinhados com os eixos cartesianos do jogo
+   Latitude e Longitude: Determina a direção da coordenada de destino através
+    de angulos alinhados com os eixos cartesianos do jogo.
     
-    GPS de referência: Usando uma coordenada GPS de jogo que alinhada com a Origem irá determinar a direção da coordenada de destino
+   GPS de referência: Usando uma coordenada GPS de jogo que alinhada com a Origem
+    irá determinar a direção da coordenada de destino.
     
-  Distância: Determina a distancia em kilometros da Origem até a coordenada desejada
+  Distância: Determina a distancia em kilometros da Origem até a coordenada desejada.
   
-  Destino: Coordenada GPS de destino
+  Destino: Coordenada GPS de destino.
