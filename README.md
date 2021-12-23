@@ -5,7 +5,7 @@ Coordinates calculator for the game Space Engineers.
 
 Este projeto começou como uma ferramenta para calcular coordenadas GPS facilitando a orientação pelo mapa do jogo, seja encontrando a orbita de um planeta para um salto com jump drive ou para se orientar na superfície de um corpo celeste.
 
-This project began as a tool to calculate GPS coordinates making it easier to navigate through the game map, either finding a planets orbit for a jump drive or for guidance on a celestial body surface.
+This project began as a tool to calculate GPS coordinates making it easier to navigate through the game map, either finding a planet's orbit for a jump drive or for guidance on a celestial body surface.
 
 Como usar:
 
